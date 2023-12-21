@@ -16,10 +16,26 @@
        
      </style>
     <script>
-     const memotext = document.getElementById('text');
+     const text = document.getElementById('text').value; 
+     const memo = document.getElementById('text');
      $('memotext').onclick = function() {
-       localStorage.setItem('memo', ($(memotext).input.value))
+       localStorage.setItem('memo', &(text))
      };
+     function save() {
+        var mymemo = document.getElementById('text').value;
+        console.log(`mymemo_in = ${mymemo}`);
+        localStorage.setItem('mymemo', $(mymemo);
+      }
+     function load() {
+        var mymemo = "";
+        if(!localStorage.getItem('mymemo')) {
+          mydata = "データがありません";
+        } else {
+          mydata = localStorage.getItem('mymemo');
+        }
+        console.log(`mymemo= ${mymemo}`);
+        document.getElementById("memo_data").innerHTML = mydata;
+      }
     </script>
    </head>
    <body>
@@ -29,11 +45,7 @@
          <input type="text" id="text">
          <input type="submit" id="submit" value="送信">
        </div>
-      <div>
-       <hi>
-        
-       </hi>
-      </div>
+      <div id="memo_data"></div>
      </div>
     </center>  
    </body>
