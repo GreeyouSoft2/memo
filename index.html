@@ -11,10 +11,16 @@
          background: white;
          border-radius:2em
          width: 19em
-         height: 19em;
+         height: 37em;
        }
        
      </style>
+    <script>
+     const memotext = document.getElementById('text');
+     $('memotext').onclick = function() {
+       localStorage.setItem('memo', ($(memotext).input.value))
+     };
+    </script>
    </head>
    <body>
     <center>
@@ -23,6 +29,11 @@
          <input type="text" id="text">
          <input type="submit" id="submit" value="送信">
        </div>
+      <div>
+       <hi>
+        
+       </hi>
+      </div>
      </div>
     </center>  
    </body>
