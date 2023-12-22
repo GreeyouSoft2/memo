@@ -47,6 +47,7 @@
      const load = document.getElementById('load')
      $('memotext').onclick = function() {
        localStorage.setItem('memo', &(text))
+       document.getElementById("memo_data").innerHTML = mymemo;
      };
      $('save').onclick = function save() {
         var mymemo = document.getElementById('text').value;
@@ -61,7 +62,7 @@
           mydata = localStorage.getItem('mymemo');
         }
         console.log(`mymemo= ${mymemo}`);
-        document.getElementById("memo_data").innerHTML = mydata;
+        document.getElementById("memo_data").innerHTML = mymemo;
       }
     </script>
    </head>
