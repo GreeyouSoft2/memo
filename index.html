@@ -46,16 +46,16 @@
      const save = document.getElementById('save')
      const load = document.getElementById('load')
      const memo_data = document.getElementId('memo_data')
-     $('memo').onclick = function() {
+     memo.onclick = function() {
        localStorage.setItem('memo', $('text'))
-       $('memo_data').innerHTML = mymemo;
+       memo_data.innerHTML = mymemo;
      };
-     $('save').onclick = function save() {
-        var mymemo = $('text')
+     save.onclick = function save() {
+        var mymemo = &('text')
         console.log('mymemo = ${mymemo}');
         localStorage.setItem('mymemo', $('mymemo');
       }
-     $('load').onlick = function load() {
+     load.onlick = function load() {
         var mymemo = "";
         if(!localStorage.getItem('mymemo')) {
           mydata = "データがありません";
@@ -63,7 +63,7 @@
           mydata = localStorage.getItem('mymemo');
         }
         console.log(`mymemo= ${mymemo}`);
-        $('memo_data').innerHTML = mymemo;
+        memo_data.innerHTML = mymemo;
       }
     </script>
    </head>
