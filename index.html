@@ -10,7 +10,7 @@
        #main{
          background: white;
          border-radius:2em
-         width: 2em
+         width: 2em;
          height: 3em;
         padding: 17em 27em;
        }
@@ -43,15 +43,17 @@
     <script>
      const text = document.getElementById('text').value; 
      const memo = document.getElementById('text');
+     const save = document.getElementById('save')
+     const load = document.getElementById('load')
      $('memotext').onclick = function() {
        localStorage.setItem('memo', &(text))
      };
-     function save() {
+     $('save').onclick = function save() {
         var mymemo = document.getElementById('text').value;
         console.log(`mymemo_in = ${mymemo}`);
         localStorage.setItem('mymemo', $(mymemo);
       }
-     function load() {
+     $('load').onlick = function load() {
         var mymemo = "";
         if(!localStorage.getItem('mymemo')) {
           mydata = "データがありません";
