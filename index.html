@@ -45,14 +45,14 @@
      const memo = document.getElementById('text');
      const save = document.getElementById('save')
      const load = document.getElementById('load')
-     $('memotext').onclick = function() {
-       localStorage.setItem('memo', &(text))
+     $('memo').onclick = function() {
+       localStorage.setItem('memo', $('text'))
        document.getElementById("memo_data").innerHTML = mymemo;
      };
      $('save').onclick = function save() {
-        var mymemo = document.getElementById('text').value;
-        console.log(`mymemo_in = ${mymemo}`);
-        localStorage.setItem('mymemo', $(mymemo);
+        var mymemo = $('text')
+        console.log('mymemo = ${mymemo}');
+        localStorage.setItem('mymemo', $('mymemo');
       }
      $('load').onlick = function load() {
         var mymemo = "";
